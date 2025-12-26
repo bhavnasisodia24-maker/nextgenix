@@ -24,7 +24,7 @@ const Card = ({ className, hover = false, glow = false, children, ...props }: Ca
                 glow && 'hover:shadow-[0_0_30px_rgba(0,242,255,0.1)] border-primary/20',
                 className
             )}
-            {...props}
+            {...(props as any)}
         >
             {/* Optional inner glow gradient */}
             {glow && (

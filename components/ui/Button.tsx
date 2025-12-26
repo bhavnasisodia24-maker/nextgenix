@@ -30,7 +30,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
         return (
             <motion.button
-                ref={ref}
+                ref={ref as any}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={disabled || loading}
@@ -43,7 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                     (disabled || loading) && 'opacity-50 cursor-not-allowed pointer-events-none',
                     className
                 )}
-                {...props}
+                {...(props as any)}
             >
                 {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 {children}
