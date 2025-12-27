@@ -36,7 +36,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 disabled={disabled || loading}
                 className={cn(
                     'inline-flex items-center justify-center rounded-full font-bold transition-all duration-300',
-                    'focus:outline-none focus:ring-2 focus:ring-primary/50',
+                    'focus:outline-none focus:ring-2 focus:ring-primary/50', 'cursor-pointer',
                     variants[variant],
                     sizes[size],
                     fullWidth && 'w-full',

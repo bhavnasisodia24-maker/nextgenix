@@ -7,7 +7,7 @@ import { ChevronRight, Zap } from 'lucide-react';
 
 const Hero = () => {
     const [text, setText] = useState('');
-    const fullText = "Digital Growth.";
+    const fullText = "Buusinesses";
     const [isTyping, setIsTyping] = useState(true);
 
     useEffect(() => {
@@ -46,8 +46,8 @@ const Hero = () => {
                 </motion.div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tighter text-white mb-6 md:mb-8 leading-[1.1]">
-                    Powering the Next <br className="hidden md:block" />
-                    Generation of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-purple-500">{text}</span>
+                    Building Smart Digital <br className="hidden md:block" />
+                    Solutions for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-purple-500">{text}</span>
                     <span className="animate-pulse text-primary">_</span>
                 </h1>
 
@@ -57,8 +57,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-base md:text-xl text-text-secondary max-w-2xl mx-auto mb-8 md:mb-12 px-4"
                 >
-                    We engineer premium digital experiences that dominate markets.
-                    Merging art with high-performance code for the modern web.
+                    We help brands grow faster with digital marketing, high-performance websites & apps, stunning designs, and AI-powered automation.
                 </motion.p>
 
                 <motion.div
@@ -67,13 +66,17 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <Button size="lg" className="group h-14 px-8">
-                        Launch Project
-                        <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                    <Button variant="glass" size="lg" className="h-14 px-8">
-                        View Ecosystem
-                    </Button>
+                    <a href="/#contact">
+                        <Button size="lg" className="group h-14 px-8">
+                            Start Your Project
+                            <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                    </a>
+                    <a href="/#services">
+                        <Button variant="glass" size="lg" className="h-14 px-8">
+                            View Our Services
+                        </Button>
+                    </a>
                 </motion.div>
             </div>
 

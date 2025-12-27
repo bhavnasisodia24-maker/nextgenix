@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "NextGenix | Future Digital Agency",
+  title: "NextGenixx | Future Digital Agency",
   description: "Powering the Next Generation of Digital Growth. Premium web development and automation services.",
 };
 

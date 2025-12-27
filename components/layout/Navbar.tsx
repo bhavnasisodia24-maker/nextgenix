@@ -17,8 +17,8 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', href: '/' },
-        { name: 'Services', href: '/services' },
-        { name: 'Benefits', href: '/#benefits' }, // Anchor links
+        { name: 'About', href: '/about' },
+        { name: 'Services', href: '/#services' },
         { name: 'Contact', href: '/#contact' },
     ];
 
@@ -37,7 +37,7 @@ const Navbar = () => {
                                 N
                             </div>
                             <span className="text-xl font-display font-bold text-white tracking-tighter">
-                                NEXT<span className="text-primary">GENIX</span>
+                                NEXT<span className="text-primary">GENIXX</span>
                             </span>
                         </Link>
 
@@ -56,9 +56,9 @@ const Navbar = () => {
 
                         {/* CTA / Hamburger */}
                         <div className="flex items-center gap-4">
-                            <Link href="/services" className="hidden sm:block">
+                            <Link href="/#contact" className="hidden sm:block">
                                 <Button variant="neon" size="sm" className="h-10 px-6">
-                                    Get Started
+                                    Get a Free Consultation
                                 </Button>
                             </Link>
 
