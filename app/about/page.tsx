@@ -7,9 +7,9 @@ import Card from '@/components/ui/Card';
 
 const AboutPage = () => {
     const team = [
-        { name: 'Alex Rivera', role: 'CEO & Founder', image: 'AR' },
-        { name: 'Sarah Chen', role: 'CTO', image: 'SC' },
-        { name: 'Marcus Thorne', role: 'Head of Design', image: 'MT' },
+        { name: 'Bhavna Sisodia', role: 'CEO & Founder', image: "BS" },
+        { name: 'Akash Kashyap', role: 'COO & CMO', image: 'AK' },
+        { name: 'Sarika Pandey', role: 'CTO', image: 'SP' },
     ];
 
     return (
