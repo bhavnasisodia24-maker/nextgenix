@@ -28,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
+
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-primary`}>
         <Navbar />
         <main className="min-h-screen">

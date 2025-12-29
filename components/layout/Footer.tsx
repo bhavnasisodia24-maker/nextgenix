@@ -15,14 +15,17 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8">
 
                     {/* Brand */}
-                    <div className="flex items-center gap-2">
+                    {/* <div className="flex items-center gap-2">
                         <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary font-black text-lg italic">
                             N
                         </div>
                         <span className="text-xl font-display font-bold text-white tracking-tighter">
                             NEXT<span className="text-primary">GENIX</span>
                         </span>
-                    </div>
+                    </div> */}
+                    <Link href="/" className="flex items-center gap-2 group">
+                        <img src="/logo.png" alt="logo" className="w-45 h-10" />
+                    </Link>
 
                     {/* Navigation */}
                     <nav className="flex items-center gap-6 md:gap-8">

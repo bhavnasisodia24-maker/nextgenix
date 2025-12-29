@@ -35,14 +35,20 @@ const TrustSection = () => {
                     {/* Left Content */}
                     <div className="flex-1 text-center lg:text-left">
                         <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-6">
-                            Why Global Brands <br />
-                            <span className="text-gradient-primary">Trust NextGenixx</span>
+                            Why Global Brands Choose <br />
+                            <span className="text-gradient-primary">NextGenixx as Their Tech Partner</span>
                         </h2>
                         <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                            We help ambitious brands design, build, and scale high-performance digital systems. From strategy to execution, we deliver secure, scalable, and future-ready solutions that power long-term growth.
+                        </p>
+                        {/* <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                             We don't just write code; we partner with you to build resilient, scalable digital infrastructure that stands the test of time.
                         </p>
+                        <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                            We don't just write code; we partner with you to build resilient, scalable digital infrastructure that stands the test of time.
+                        </p> */}
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 mt-12">
+                        {/* <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 mt-12">
                             <div>
                                 <h3 className="text-4xl font-bold text-white mb-1">250+</h3>
                                 <p className="text-sm text-white/50 uppercase tracking-widest">Projects Delivered</p>
@@ -52,7 +58,7 @@ const TrustSection = () => {
                                 <h3 className="text-4xl font-bold text-white mb-1">98%</h3>
                                 <p className="text-sm text-white/50 uppercase tracking-widest">Client Retention</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right Grid */}

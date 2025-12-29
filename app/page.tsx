@@ -14,7 +14,7 @@ export default function Home() {
       <ServicesOverview />
       <TrustSection />
       <Testimonials />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
 
       <section className="py-32 px-6">
         <div className="container mx-auto">

@@ -44,6 +44,24 @@ const Contact = () => {
                                 />
                             </div>
                         </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold text-white/50 uppercase tracking-widest pl-4">Business Name</label>
+                                <input
+                                    type="text"
+                                    className="w-full h-12 md:h-14 bg-white/5 rounded-full px-6 md:px-8 text-white border border-white/10 focus:border-primary focus:bg-white/10 focus:outline-none transition-all placeholder:text-white/20"
+                                    placeholder="Restaurant, Travel Agency"
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold text-white/50 uppercase tracking-widest pl-4">Business Website (Optional)</label>
+                                <input
+                                    type="text"
+                                    className="w-full h-12 md:h-14 bg-white/5 rounded-full px-6 md:px-8 text-white border border-white/10 focus:border-primary focus:bg-white/10 focus:outline-none transition-all placeholder:text-white/20"
+                                    placeholder="www.example.com"
+                                />
+                            </div>
+                        </div>
 
                         <div className="space-y-2">
                             <label className="text-xs font-bold text-white/50 uppercase tracking-widest pl-4">Project Details</label>
