@@ -42,22 +42,51 @@ const Contact = () => {
             // Log the date we are sending
             console.log('Sending data:', formData);
 
-            await fetch(scriptUrl, {
+            // await fetch(scriptUrl, {
+            //     method: 'POST',
+            //     mode: 'no-cors', // 'no-cors' is required for Google Apps Script web apps
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(formData)
+            // });
+
+            // // With no-cors, we assume success if the request completes
+            // console.log('Fetch request sent successfully (no-cors mode)');
+            // setStatus('success');
+            // setFormData({ name: '', email: '', businessName: '', website: '', message: '' });
+
+            // // Reset success message after 5 seconds
+            // setTimeout(() => setStatus('idle'), 5000);
+
+            //Bhavna Edit This
+            const response = await fetch(scriptUrl, {
                 method: 'POST',
-                mode: 'no-cors', // 'no-cors' is required for Google Apps Script web apps
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData),
             });
 
-            // With no-cors, we assume success if the request completes
-            console.log('Fetch request sent successfully (no-cors mode)');
+            if (!response.ok) {
+                throw new Error(`Request failed with status ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log('Google Apps Script response:', result);
+
             setStatus('success');
-            setFormData({ name: '', email: '', businessName: '', website: '', message: '' });
+            setFormData({
+                name: '',
+                email: '',
+                businessName: '',
+                website: '',
+                message: '',
+            });
 
             // Reset success message after 5 seconds
             setTimeout(() => setStatus('idle'), 5000);
+
         } catch (error) {
             console.error('SUBMISSION ERROR:', error);
             setStatus('error');
