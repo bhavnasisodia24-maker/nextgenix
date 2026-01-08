@@ -10,19 +10,19 @@ const Testimonials = () => {
             name: 'Sarah Chen',
             role: 'CTO',
             company: 'TechFlow',
-            content: 'NextGenixx completely revitalized our legacy infrastructure. The AI automation they implemented reduced our server costs by 40% while doubling performance.'
+            content: 'NextGenixx made our systems faster, smarter, and more cost-efficient. The automation they implemented had an immediate impact.'
         },
         {
             name: 'Marcus Thorne',
             role: 'Founder',
             company: 'Nexus Ventures',
-            content: 'The level of technical expertise is unmatched. They built a custom financial platform for us that is not only secure but incredibly intuitive for our users.'
+            content: 'Excellent technical expertise and smooth execution. The platform they built is powerful, secure, and easy to use.'
         },
         {
             name: 'Elena Rodriguez',
             role: 'VP of Marketing',
             company: 'GlobalShift',
-            content: 'Their data-driven approach to digital marketing transformed our acquisition strategy. We saw a 3x increase in qualified leads within the first quarter.'
+            content: 'Real growth, real results. Their marketing strategy helped us attract better leads in a short time.'
         },
     ];
 

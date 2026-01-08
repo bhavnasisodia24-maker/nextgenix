@@ -70,6 +70,14 @@ const Navbar = () => {
                                 <Menu />
                             </button>
                         </div>
+
+                        {/* Edited by Bhavna - Changing the Hamburger Menu*/}
+                        {/* <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="md:hidden p-2 text-foreground hover:bg-white/10 rounded-lg transition-colors"
+                        >
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button> */}
                     </div>
                 </div>
             </motion.nav>
@@ -82,8 +90,9 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-3xl flex flex-col justify-center items-center gap-8"
+                        className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-3xl flex flex-col items-center justify-center gap-8"
                     >
+
                         <button
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="absolute top-8 right-8 p-2 text-white/50 hover:text-white transition-colors"
