@@ -21,46 +21,86 @@ const Contact = () => {
         }));
     };
 
+    // const handleSubmit = async (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     setStatus('submitting');
+
+    //     const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+
+    //     // DEBUG LOGGING
+    //     console.log('Attempting to submit form...');
+    //     console.log('Script URL present:', !!scriptUrl);
+
+    //     if (!scriptUrl) {
+    //         console.error('ERROR: Google Sheets URL is missing. Check .env.local and RESTART SERVER.');
+    //         setStatus('error');
+    //         alert('Configuration Error: Google Sheets URL is missing. You may need to restart your terminal/server if you just added it.');
+    //         return;
+    //     }
+
+    //     try {
+    //         // Log the date we are sending
+    //         console.log('Sending data:', formData);
+
+    //         // await fetch(scriptUrl, {
+    //         //     method: 'POST',
+    //         //     mode: 'no-cors', // 'no-cors' is required for Google Apps Script web apps
+    //         //     headers: {
+    //         //         'Content-Type': 'application/json',
+    //         //     },
+    //         //     body: JSON.stringify(formData)
+    //         // });
+
+    //         // // With no-cors, we assume success if the request completes
+    //         // console.log('Fetch request sent successfully (no-cors mode)');
+    //         // setStatus('success');
+    //         // setFormData({ name: '', email: '', businessName: '', website: '', message: '' });
+
+    //         // // Reset success message after 5 seconds
+    //         // setTimeout(() => setStatus('idle'), 5000);
+
+    //         //Bhavna Edit This
+    //         const response = await fetch(scriptUrl, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(formData),
+    //         });
+
+    //         if (!response.ok) {
+    //             throw new Error(`Request failed with status ${response.status}`);
+    //         }
+
+    //         const result = await response.json();
+    //         console.log('Google Apps Script response:', result);
+
+    //         setStatus('success');
+    //         setFormData({
+    //             name: '',
+    //             email: '',
+    //             businessName: '',
+    //             website: '',
+    //             message: '',
+    //         });
+
+    //         // Reset success message after 5 seconds
+    //         setTimeout(() => setStatus('idle'), 5000);
+
+    //     } catch (error) {
+    //         console.error('SUBMISSION ERROR:', error);
+    //         setStatus('error');
+    //         alert('Submission Failed. Check console for details.');
+    //     }
+    // };
+
+    //Bhavna Edited this Section
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('submitting');
 
-        const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
-
-        // DEBUG LOGGING
-        console.log('Attempting to submit form...');
-        console.log('Script URL present:', !!scriptUrl);
-
-        if (!scriptUrl) {
-            console.error('ERROR: Google Sheets URL is missing. Check .env.local and RESTART SERVER.');
-            setStatus('error');
-            alert('Configuration Error: Google Sheets URL is missing. You may need to restart your terminal/server if you just added it.');
-            return;
-        }
-
         try {
-            // Log the date we are sending
-            console.log('Sending data:', formData);
-
-            // await fetch(scriptUrl, {
-            //     method: 'POST',
-            //     mode: 'no-cors', // 'no-cors' is required for Google Apps Script web apps
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(formData)
-            // });
-
-            // // With no-cors, we assume success if the request completes
-            // console.log('Fetch request sent successfully (no-cors mode)');
-            // setStatus('success');
-            // setFormData({ name: '', email: '', businessName: '', website: '', message: '' });
-
-            // // Reset success message after 5 seconds
-            // setTimeout(() => setStatus('idle'), 5000);
-
-            //Bhavna Edit This
-            const response = await fetch(scriptUrl, {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,11 +109,8 @@ const Contact = () => {
             });
 
             if (!response.ok) {
-                throw new Error(`Request failed with status ${response.status}`);
+                throw new Error('Failed to submit');
             }
-
-            const result = await response.json();
-            console.log('Google Apps Script response:', result);
 
             setStatus('success');
             setFormData({
@@ -84,15 +121,15 @@ const Contact = () => {
                 message: '',
             });
 
-            // Reset success message after 5 seconds
             setTimeout(() => setStatus('idle'), 5000);
-
         } catch (error) {
-            console.error('SUBMISSION ERROR:', error);
+            console.error('Submission error:', error);
             setStatus('error');
-            alert('Submission Failed. Check console for details.');
         }
     };
+
+
+
 
     return (
         <section id="contact" className="section-padding relative">
