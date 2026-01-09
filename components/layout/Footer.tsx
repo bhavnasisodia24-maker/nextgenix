@@ -43,16 +43,16 @@ const Footer = () => {
                     {/* Socials & Copyright */}
                     <div className="flex flex-col items-center md:items-end gap-4">
                         <div className="flex gap-4">
-                            <Link href="#" className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.linkedin.com/company/nextgenixx/" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Linkedin size={18} />
                             </Link>
-                            <Link href="#" className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.instagram.com/nextgenixx/" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Instagram size={18} />
                             </Link>
-                            <Link href="#" className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.facebook.com/nextgenixx" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Facebook size={18} />
                             </Link>
-                            <Link href="#" className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.youtube.com/@NextGenixx" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Youtube size={18} />
                             </Link>
                         </div>
