@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-
+      <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="../public/apple-touch-icon.png"></link>
+      </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-primary`}>
         <Navbar />
         <main className="min-h-screen">
