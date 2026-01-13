@@ -34,10 +34,10 @@ const TrustSection = () => {
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                     {/* Left Content */}
                     <div className="flex-1 text-center lg:text-left">
-                        <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-6">
+                        <h1 className="text-4xl md:text-5xl font-display font-black text-white mb-6">
                             Why Global Brands Choose <br />
                             <span className="text-gradient-primary">NextGenixx as Their Tech Partner</span>
-                        </h2>
+                        </h1>
                         <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                             We help ambitious brands design, build, and scale high-performance digital systems. From strategy to execution, we deliver secure, scalable, and future-ready solutions that power long-term growth.
                         </p>
