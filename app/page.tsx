@@ -3,7 +3,7 @@ import ServicesOverview from '@/components/home/ServicesOverview';
 import TrustSection from '@/components/home/TrustSection';
 import Testimonials from '@/components/home/Testimonials';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
-import Contact from '@/components/home/Contact';
+
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
 
@@ -28,7 +28,7 @@ export default function Home() {
               Join the forward-thinking brands that are already defining the future with NextGenixx.
             </p>
             <div className="relative z-10">
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Button size="lg" className="h-16 px-12 text-lg shadow-[0_0_40px_rgba(0,242,255,0.3)] hover:shadow-[0_0_60px_rgba(0,242,255,0.5)]">
                   Book a Free Consultation
                 </Button>
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Contact />
+
     </>
   );
 }

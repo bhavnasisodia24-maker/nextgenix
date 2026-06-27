@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
 import { ChevronRight, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 const Hero = () => {
     const [text, setText] = useState('');
@@ -66,17 +67,17 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <a href="/#contact">
+                    <Link href="/contact">
                         <Button size="lg" className="group h-14 px-8">
                             Start Your Project
                             <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Button>
-                    </a>
-                    <a href="/#services">
+                    </Link>
+                    <Link href="/services">
                         <Button variant="glass" size="lg" className="h-14 px-8">
                             View Our Services
                         </Button>
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
 

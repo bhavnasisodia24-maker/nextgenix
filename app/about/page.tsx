@@ -2,15 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, Globe } from 'lucide-react';
+import { Users, Target, Globe, Search, Lightbulb, Rocket, CheckCircle } from 'lucide-react';
 import Card from '@/components/ui/Card';
 
 const AboutPage = () => {
-    const team = [
-        { name: 'Bhavna Sisodia', role: 'CEO & Founder', image: "BS" },
-        { name: 'Akash Kashyap', role: 'COO & CMO', image: 'AK' },
-        { name: 'Sarika Pandey', role: 'CTO', image: 'SP' },
-    ];
 
     return (
         <div className="pt-32 pb-20">
@@ -49,22 +44,42 @@ const AboutPage = () => {
                     </Card>
                 </div>
 
-                {/* Team Section */}
-                <div className="text-center mb-16">
+                {/* Our Process Section */}
+                <div className="text-center mb-16 mt-32">
                     <h2 className="text-3xl md:text-5xl font-display font-black text-white mb-6">
-                        Meet the <span className="text-gradient-primary">Team</span>
+                        How We <span className="text-gradient-primary">Work</span>
                     </h2>
+                    <p className="text-white/60 max-w-2xl mx-auto mb-12">
+                        A streamlined, transparent process designed to turn your vision into reality efficiently.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {team.map((member) => (
-                        <div key={member.name} className="group text-center">
-                            <div className="w-32 h-32 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-2xl font-black text-primary mb-6 group-hover:bg-primary/10 transition-colors">
-                                {member.image}
-                            </div>
-                            <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                            <p className="text-primary text-sm uppercase tracking-widest">{member.role}</p>
-                        </div>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                    {/* Connecting Line */}
+                    <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-primary/10 via-primary/50 to-primary/10 -translate-y-1/2 hidden md:block z-0" />
+
+                    {[
+                        { title: 'Discovery', desc: 'Understanding your goals, audience, and challenges.', icon: Search },
+                        { title: 'Strategy', desc: 'Crafting a customized roadmap for success.', icon: Lightbulb },
+                        { title: 'Execution', desc: 'Building and launching with precision and speed.', icon: Rocket },
+                        { title: 'Optimization', desc: 'Continuous testing and improvement for maximum ROI.', icon: CheckCircle },
+                    ].map((step, i) => (
+                        <motion.div
+                            key={step.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                            viewport={{ once: true }}
+                            className="relative z-10"
+                        >
+                            <Card className="p-6 text-center h-full flex flex-col items-center group hover:border-primary/50 transition-colors bg-background">
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary">
+                                    <step.icon size={28} className="text-primary group-hover:text-background transition-colors" />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-3">0{i + 1}. {step.title}</h3>
+                                <p className="text-sm text-white/60">{step.desc}</p>
+                            </Card>
+                        </motion.div>
                     ))}
                 </div>
 

@@ -9,40 +9,19 @@ import Link from 'next/link';
 const ServicesOverview = () => {
     const services = [
         {
-            title: 'Digital Marketing & Growth',
-            icon: Rocket,
-            desc: 'Strategic digital marketing solutions to increase brand visibility, traffic, and customer engagement.',
-            features: ['Social Media Marketing', 'Content Marketing', 'Lead Generation', 'Campaign Strategy']
-        },
-        {
-            title: 'Performance Marketing',
-            icon: BarChart3,
-            desc: 'Optimization-focused campaigns designed to improve rankings, conversions, and measurable performance.',
-            features: ['Search Engine Optimization', 'Paid Advertising (PPC)', 'Conversion Optimization', 'Analytics & Reporting']
-        },
-        {
             title: 'Website Development',
             icon: Globe,
-            desc: 'Fast, secure, and scalable websites built to represent your brand and drive business results.',
-            features: ['Business Websites', 'Landing Pages', 'E-commerce Development', 'CMS Integration']
+            desc: 'Fast, secure, and scalable websites built to represent your brand and drive business results.'
         },
         {
             title: 'Application Development',
             icon: Code2,
-            desc: 'Custom applications built to solve business problems and support long-term growth.',
-            features: ['Web Applications', 'Mobile App Development', 'API Integrations', 'Dashboard Systems']
-        },
-        {
-            title: 'UI/UX Design (Web & Mobile)',
-            icon: LayoutDashboard,
-            desc: 'User-centered designs that deliver seamless, modern, and engaging digital experiences.',
-            features: ['Website UI Design', 'Mobile App UI Design', 'Wireframing & Prototyping', 'UX Optimization']
+            desc: 'Custom applications built to solve business problems and support long-term growth.'
         },
         {
             title: 'AI Automation & Workflow Optimization',
             icon: Zap,
-            desc: 'Intelligent automation solutions that reduce manual work and improve operational efficiency.',
-            features: ['AI Chatbots', 'Workflow Automation', 'CRM Automation', 'Tool Integrations']
+            desc: 'Intelligent automation solutions that reduce manual work and improve operational efficiency.'
         },
     ];
 
@@ -67,16 +46,6 @@ const ServicesOverview = () => {
                             <h3 className="text-xl font-bold text-white mb-4">{s.title}</h3>
                             <p className="text-white/60 mb-6 text-sm leading-relaxed min-h-[60px]">{s.desc}</p>
 
-                            <div className="space-y-3 mb-6 flex-grow">
-                                {s.features.map((f) => (
-                                    <div key={f} className="flex items-center gap-2 text-xs md:text-sm font-medium text-white/70">
-                                        <div className="min-w-4 pt-1 sm:pt-0">
-                                            <CheckCircle2 size={16} className="text-primary" />
-                                        </div>
-                                        <span>{f}</span>
-                                    </div>
-                                ))}
-                            </div>
 
 
                         </Card>
@@ -84,9 +53,9 @@ const ServicesOverview = () => {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <Link href="/#contact">
+                    <Link href="/services">
                         <Button size="lg" className="h-14 px-10 text-lg shadow-[0_0_20px_rgba(0,242,255,0.3)] hover:shadow-[0_0_30px_rgba(0,242,255,0.5)]">
-                            Get Started
+                            View All Services
                         </Button>
                     </Link>
                 </div>

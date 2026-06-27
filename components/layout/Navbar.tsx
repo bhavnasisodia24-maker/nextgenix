@@ -18,8 +18,8 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', href: '/' },
         { name: 'About', href: '/about' },
-        { name: 'Services', href: '/#services' },
-        { name: 'Contact', href: '/#contact' },
+        { name: 'Services', href: '/services' },
+        { name: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -57,17 +57,17 @@ const Navbar = () => {
 
                         {/* CTA / Hamburger */}
                         <div className="flex items-center gap-4">
-                            <Link href="/#contact" className="hidden sm:block">
+                            <Link href="/contact" className="hidden sm:block">
                                 <Button variant="neon" size="sm" className="h-10 px-6">
                                     Get a Free Consultation
                                 </Button>
                             </Link>
 
                             <button
-                                onClick={() => setIsMobileMenuOpen(true)}
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                                 className="md:hidden p-2 text-white hover:text-primary transition-colors"
                             >
-                                <Menu />
+                                {isMobileMenuOpen ? <X /> : <Menu />}
                             </button>
                         </div>
 
@@ -86,36 +86,29 @@ const Navbar = () => {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, x: '100%' }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: '100%' }}
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-3xl flex flex-col items-center justify-center gap-8"
+                        initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed top-24 left-4 right-4 z-[60] glass bg-background/80 rounded-3xl p-6 flex flex-col gap-6 md:hidden shadow-2xl border border-white/10 backdrop-blur-xl"
                     >
-
-                        <button
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="absolute top-8 right-8 p-2 text-white/50 hover:text-white transition-colors"
-                        >
-                            <X size={32} />
-                        </button>
-
-                        {navLinks.map((link, i) => (
-                            <motion.div
+                        {navLinks.map((link) => (
+                            <Link
                                 key={link.name}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 + i * 0.1 }}
+                                href={link.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-xl font-display font-bold text-white hover:text-primary transition-colors text-center block"
                             >
-                                <Link
-                                    href={link.href}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-3xl md:text-4xl font-display font-bold text-white hover:text-primary transition-colors"
-                                >
-                                    {link.name}
-                                </Link>
-                            </motion.div>
+                                {link.name}
+                            </Link>
                         ))}
+                        <div className="pt-4 border-t border-white/10">
+                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                                <Button variant="neon" className="w-full h-12">
+                                    Get a Free Consultation
+                                </Button>
+                            </Link>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

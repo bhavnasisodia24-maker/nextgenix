@@ -4,9 +4,9 @@ import { Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
 const Footer = () => {
     const links = [
         { label: 'Home', href: '/' },
-        { label: 'Services', href: '/#services' },
+        { label: 'Services', href: '/services' },
         { label: 'About', href: '/about' },
-        { label: 'Contact', href: '/#contact' },
+        { label: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -41,22 +41,22 @@ const Footer = () => {
                     </nav>
 
                     {/* Socials & Copyright */}
-                    <div className="flex flex-col items-center md:items-end gap-4">
+                    <div className="flex flex-col items-center md:items-end gap-6 mt-8 md:mt-0">
                         <div className="flex gap-4">
-                            <Link href="https://www.linkedin.com/company/nextgenixx/" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.linkedin.com/company/nextgenixx/" target='_blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Linkedin size={18} />
                             </Link>
-                            <Link href="https://www.instagram.com/nextgenixx/" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.instagram.com/nextgenixx/" target='_blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Instagram size={18} />
                             </Link>
-                            <Link href="https://www.facebook.com/nextgenixx" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.facebook.com/nextgenixx" target='_blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Facebook size={18} />
                             </Link>
-                            <Link href="https://www.youtube.com/@NextGenixx" target='-blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
+                            <Link href="https://www.youtube.com/@NextGenixx" target='_blank' className="p-2 rounded-full glass hover:bg-primary hover:text-background transition-all">
                                 <Youtube size={18} />
                             </Link>
                         </div>
-                        <div className="flex gap-6 mt-4 md:mt-0 text-xs text-white/50">
+                        <div className="flex gap-6 text-xs text-white/50">
                             <Link href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link>
                             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
                         </div>
